@@ -45,8 +45,8 @@ sub usage {
 	die("\n")
 } ####End of subroutine usage
 Getopt::Long::GetOptions(
-			'w|warning=f'      =>  \$warning,
-			'c|critical=f'	   =>  \$critical
+			'w|warning=i'      =>  \$warning,
+			'c|critical=i'	   =>  \$critical
 			) or usage ("Invalid commmand line options.");
 
 usage("No parameters specified") unless defined $warning && $critical;
