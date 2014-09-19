@@ -21,12 +21,12 @@
 use strict;
 use warnings;
 use IO::Socket;
-use Sys::Hostname;
+use Net::Domain qw(hostfqdn);
 use Getopt::Long;
 use Time::HiRes qw(time);
 use Data::Dumper;
 my $server;
-my $hostname = hostname;
+my $hostname = hostfqdn;
 my ($warning, $critical);
 ##Usage
 sub usage {
